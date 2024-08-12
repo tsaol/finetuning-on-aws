@@ -1,40 +1,49 @@
 # Finetuning on AWS
 
-This repository contains resources and guides for fine-tuning large language models (LLMs) on AWS using SageMaker and LLaMA Factory.
-
 ## Overview
 
-Fine-tuning LLMs on AWS can be complex, but this project aims to simplify the process by leveraging SageMaker and LLaMA Factory. It provides step-by-step instructions, code samples, and best practices for efficiently fine-tuning models on AWS infrastructure.
+This repository provides a streamlined approach to fine-tuning Large Language Models (LLMs) on AWS SageMaker using the LLaMA Factory framework. It aims to simplify the process of adapting powerful language models to specific tasks or domains using AWS cloud infrastructure.
 
-## Key Features
+## Features
 
-- Utilizes AWS SageMaker for managed machine learning workflows
-- Integrates LLaMA Factory for optimized fine-tuning of LLMs
-- Provides Jupyter notebooks with detailed examples
-- Includes CloudFormation templates for easy AWS resource setup
+- Leverage AWS SageMaker for scalable and managed machine learning workflows
+- Utilize LLaMA Factory for efficient fine-tuning of various LLM architectures
+- Implement distributed training across multiple nodes and GPUs
+- Deploy fine-tuned models on SageMaker endpoints
+- Support for advanced fine-tuning techniques like QLora SFT (Quantized Low-Rank Adaptation Supervised Fine-Tuning)
 
 ## Getting Started
 
 1. Clone this repository:
-   ```
+```
    git clone https://github.com/tsaol/finetuning-on-aws.git
-   ```
+```
 
-2. Set up your AWS environment and credentials
+2. Set up your AWS environment and configure your credentials
 
-3. Follow the instructions in the Jupyter notebooks to start fine-tuning
-
-## Contents
-
-- `notebooks/`: Jupyter notebooks with step-by-step guides
-- `cloudformation/`: AWS CloudFormation templates for resource setup
-- `scripts/`: Utility scripts for data processing and model evaluation
+3. Follow the Jupyter notebooks in the `notebooks/` directory for step-by-step guidance
 
 ## Prerequisites
 
-- AWS account with appropriate permissions
-- Basic knowledge of AWS services, particularly SageMaker
-- Familiarity with Python and machine learning concepts
+- An AWS account with appropriate permissions
+- Basic understanding of AWS SageMaker and machine learning concepts
+- Familiarity with Python programming
+
+## Repository Structure
+
+- `notebooks/`: Jupyter notebooks with detailed examples and workflows
+- `LLaMA-Factory/`: Submodule containing the LLaMA Factory framework
+- `awsome-distributed-training/`: Submodule with resources for distributed training
+
+## Usage
+
+Detailed usage instructions are provided in the Jupyter notebooks. These cover:
+
+1. Data preparation
+2. Model selection and configuration
+3. Fine-tuning process
+4. Evaluation and iteration
+5. Model deployment on SageMaker endpoints
 
 ## Contributing
 
@@ -51,19 +60,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-For any questions or feedback, please open an issue in this repository.
+For questions or feedback, please open an issue in this repository.
 
----
-
-This README provides a concise overview of the project, its key features, and instructions for getting started. It also includes sections on prerequisites, contributing guidelines, and acknowledgments. You may want to customize this further based on specific details of your project or any additional information you'd like to include.
-
-Citations:
-[1] https://github.com/matiassingers/awesome-readme
-[2] https://github.com/jehna/readme-best-practices
-[3] https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/
-[4] https://bulldogjob.com/readme/how-to-write-a-good-readme-for-your-github-project
-[5] https://github.com/jehna/readme-best-practices/blob/master/README-default.md
-[6] https://www.hatica.io/blog/best-practices-for-github-readme/
-[7] https://github.com/othneildrew/Best-README-Template
-[8] https://pplx-res.cloudinary.com/image/upload/v1723470931/user_uploads/sfihycukl/Screenshot-2024-08-12-at-21.50.26.jpg
-[9] https://github.com/tsaol/finetuning-on-aws
