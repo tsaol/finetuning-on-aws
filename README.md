@@ -10,7 +10,6 @@ This repository provides a streamlined approach to fine-tuning Large Language Mo
 - Utilize LLaMA Factory for efficient fine-tuning of various LLM architectures
 - Implement distributed training across multiple nodes and GPUs
 - Deploy fine-tuned models on SageMaker endpoints
-- Support for advanced fine-tuning techniques like QLora SFT (Quantized Low-Rank Adaptation Supervised Fine-Tuning)
 
 ## Getting Started
 
@@ -56,7 +55,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Acknowledgments
 
 - [LLaMA Factory](https://github.com/hiyouga/LLaMA-Factory)
-- [AWS SageMaker](https://aws.amazon.com/sagemaker/)
+- [Amazon SageMaker](https://aws.amazon.com/sagemaker/)
 
 ## Contact
 
