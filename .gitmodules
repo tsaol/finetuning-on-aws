@@ -1,0 +1,3 @@
+[submodule "finetuning-llamafactory/LLaMA-Factory"]
+	path = finetuning-llamafactory/LLaMA-Factory
+	url = https://github.com/xiehust/LLaMA-Factory.git
