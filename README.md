@@ -21,7 +21,7 @@ This repository provides a streamlined approach to fine-tuning Large Language Mo
 
 2. Set up your AWS environment and configure your credentials
 
-3. Follow the Jupyter notebooks in the `notebooks/` directory for step-by-step guidance
+3. Follow the Jupyter notebooks in the `finetuning-llamafactory/` directory for step-by-step guidance
 
 ## Prerequisites
 
@@ -31,9 +31,9 @@ This repository provides a streamlined approach to fine-tuning Large Language Mo
 
 ## Repository Structure
 
-- `notebooks/`: Jupyter notebooks with detailed examples and workflows
-- `LLaMA-Factory/`: Submodule containing the LLaMA Factory framework
-- `awsome-distributed-training/`: Submodule with resources for distributed training
+- `finetuning-llamafactory/`: Main directory containing the finetuning scripts and notebooks
+- `LLaMA-Factory @ f6ac23e`: Submodule containing the LLaMA Factory framework (linked to a specific commit)
+- `awsome-distributed-training @ 26130c0`: Submodule with resources for distributed training (linked to a specific commit)
 
 ## Usage
 
