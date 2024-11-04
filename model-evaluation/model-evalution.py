@@ -14,8 +14,15 @@ bedrock_runtime = boto3.client(
 def invoke_llama(prompt):
     # 设置模型参数
     model_id = "meta.llama3-1-8b-instruct-v1:0"  # 或选择其他版本
+    
+    prompt_str = f"""
+        <|begin_of_text|><|start_header_id|>user<|end_header_id|>
+        {prompt}
+        <|eot_id|>
+        <|start_header_id|>assistant<|end_header_id|>
+    """
     body = json.dumps({
-        "prompt": f"<s>[INST] {prompt} [/INST]",
+        "prompt": prompt_str,
         "max_gen_length": 512,
         "temperature": 0.5
     })
