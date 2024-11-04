@@ -6,8 +6,8 @@ from deepeval import assert_test
 # 配置Bedrock模型
 bedrock_model = BedrockChat(
     credentials_profile_name="default",  # AWS配置文件名
-    region_name="us-east-1",            # AWS区域
-    model_id="meta.llama2-13b-chat-v1", # Llama模型ID
+    region_name="us-west-2",            # AWS区域
+    model_id="meta.llama3-1-8b-instruct-v1:0", # Llama模型ID
     model_kwargs={
         "temperature": 0.4,
         "max_tokens": 512
