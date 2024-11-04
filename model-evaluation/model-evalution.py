@@ -13,7 +13,7 @@ bedrock_runtime = boto3.client(
 
 def invoke_llama(prompt):
     # 设置模型参数
-    model_id = "meta.llama2-13b-chat-v1"  # 或选择其他版本
+    model_id = "meta.llama3-1-8b-instruct-v1:0"  # 或选择其他版本
     body = json.dumps({
         "prompt": f"<s>[INST] {prompt} [/INST]",
         "max_gen_length": 512,
