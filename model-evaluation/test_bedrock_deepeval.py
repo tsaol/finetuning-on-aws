@@ -25,11 +25,11 @@ class AWSBedrock(DeepEvalBaseLLM):
 
 # Replace these with real values
 custom_model = BedrockChat(
-    credentials_profile_name="default" # e.g. "default"
-    region_name= "us-east-1" # e.g. "us-east-1"
-    endpoint_url="https://bedrock-runtime.us-east-1.amazonaws.com" # e.g. "https://bedrock-runtime.us-east-1.amazonaws.com"
-    model_id= "anthropic.claude-v2", # e.g. "anthropic.claude-v2"
-    model_kwargs={"temperature": 0.4},
+    credentials_profile_name ="default", # e.g. "default"
+    region_name = "us-east-1", # e.g. "us-east-1"
+    endpoint_url ="https://bedrock-runtime.us-east-1.amazonaws.com", # e.g. "https://bedrock-runtime.us-east-1.amazonaws.com"
+    model_id = "anthropic.claude-v2", # e.g. "anthropic.claude-v2"
+    model_kwargs = {"temperature": 0.4}
 )
 
 aws_bedrock = AWSBedrock(model=custom_model)
