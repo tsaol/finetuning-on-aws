@@ -1,5 +1,6 @@
 from langchain_community.chat_models import BedrockChat
 from deepeval.models.base_model import DeepEvalBaseLLM
+from deepeval.metrics import AnswerRelevancyMetric
 
 class AWSBedrock(DeepEvalBaseLLM):
     def __init__(
@@ -21,16 +22,18 @@ class AWSBedrock(DeepEvalBaseLLM):
         return res.content
 
     def get_model_name(self):
-        return "Custom Azure OpenAI Model"
+        return "Bedrock Models"
 
 # Replace these with real values
 custom_model = BedrockChat(
-    credentials_profile_name ="default", # e.g. "default"
-    region_name = "us-east-1", # e.g. "us-east-1"
-    endpoint_url ="https://bedrock-runtime.us-east-1.amazonaws.com", # e.g. "https://bedrock-runtime.us-east-1.amazonaws.com"
-    model_id = "anthropic.claude-v2", # e.g. "anthropic.claude-v2"
+    credentials_profile_name ="default", 
+    region_name = "us-west-2", 
+    model_id = "anthropic.claude-3-5-sonnet-20240620-v1:0",
     model_kwargs = {"temperature": 0.4}
 )
 
 aws_bedrock = AWSBedrock(model=custom_model)
 print(aws_bedrock.generate("Write me a joke"))
+
+
+metric = AnswerRelevancyMetric(model=aws_bedrock)
