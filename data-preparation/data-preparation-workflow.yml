@@ -1,5 +1,5 @@
 app:
-  description: 输入一个网页实现文章内容的仿写和改写
+  description: llm-dataflow-实现基于dify的数据处理workflow
   icon: 🤖
   icon_background: '#FFEAD5'
   mode: workflow
