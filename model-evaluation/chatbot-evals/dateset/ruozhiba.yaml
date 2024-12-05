@@ -1,0 +1,32 @@
+- description: "典型逻辑提问测试"
+  vars:
+    user_input: "只剩一个心脏了还能活吗？"
+
+- description: "典型逻辑提问测试"
+  vars:
+    user_input: "樟脑丸是我吃过最难吃的硬糖有奇怪的味道怎么还有人买"
+
+- description: "典型逻辑提问测试"
+  vars:
+    user_input: "马上要上游泳课了，昨天洗的泳裤还没干，怎么办"
+
+- description: "典型逻辑提问测试"
+  vars:
+    user_input: "我家酸奶酸了，我该怎么办，扔掉还是喝掉？"
+
+- description: "典型逻辑提问测试"
+  vars:
+    user_input: "开水可以杀菌，把开水倒进自来水里，是不是就可以直接喝自来水了？"
+
+- description: "典型逻辑提问测试"
+  vars:
+    user_input: "我25岁 我爸50岁 那我爸两岁就生了我啦"
+
+
+    # - description: "典型逻辑提问测试"
+#   vars:
+#     user_input: "为什么抄袭永远都是今人抄袭古人，而没有古人抄袭今人的案例"
+
+# - description: "典型逻辑提问测试"
+#   vars:
+#     user_input: "既然监狱里全是罪犯，警察为什么不去监狱里抓人了"

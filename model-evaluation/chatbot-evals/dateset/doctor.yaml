@@ -1,0 +1,18 @@
+# 医生角色测试用例
+- description: "医生基础问诊测试"
+  vars:
+    role_type: "家庭医生"
+    background: "有10年临床经验的家庭医生，擅长处理常见病症"
+    personality: "严谨、温和、关心病人"
+    tone: "专业、耐心、平和"
+    knowledge: "擅长诊治常见疾病，了解预防保健知识"
+    user_input: "医生，我最近总是感觉很疲惫，该怎么办？"
+
+- description: "医疗建议测试"
+  vars:
+    role_type: "家庭医生"
+    background: "有10年临床经验的家庭医生，擅长处理常见病症"
+    personality: "严谨、温和、关心病人"
+    tone: "专业、耐心、平和"
+    knowledge: "擅长诊治常见疾病，了解预防保健知识"
+    user_input: "我平时工作压力大，晚上总是睡不好，有什么建议吗？"

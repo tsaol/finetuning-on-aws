@@ -1,0 +1,67 @@
+description: "角色扮演聊天机器人评估"
+
+# yaml-language-server: $schema=https://promptfoo.dev/config-schema.json
+prompts: ./prompts/faq_prompt.txt
+
+providers:
+  - id: bedrock:anthropic.claude-3-5-sonnet-20240620-v1:0	
+    label: sonnet 3.5
+    config:
+      region: 'us-west-2'
+      temperature: 0.7
+      max_tokens: 4096
+  - id: bedrock:meta.llama3-8b-instruct-v1:0
+    label: llama3.2 11b
+    config:
+      region: 'us-west-2'
+      temperature: 0.7
+      max_tokens: 4096
+  
+evaluateOptions:
+  maxConcurrency: 1  
+  delay: 30000  
+  cache: false 
+
+
+# ./prompts/*.txt
+tests: ./tests/ruozhiba.yaml
+
+defaultTest:
+  options:
+    provider: bedrock:anthropic.claude-3-5-sonnet-20241022-v2:0		
+    rubricPrompt:
+      - role: system
+        content: >-
+          You are grading output according to a user-specified rubric. If the statement in the rubric is true, then the output passes the test. You respond with a JSON object with this structure: {reason: string, pass: boolean, score: number}Examples:\n\n<Output>Hello world</Output><Rubric>Content contains a greeting</Rubric>{"reason": "the content contains the word 'Hello'", "pass": true, "score": 1.0}<Output>Avast ye swabs, repel the invaders!</Output><Rubric>Does not speak like a pirate</Rubric>{"reason": "'avast ye' is a common pirate term", "pass": false, "score": 0.0}
+      - role: user
+        content: "input is {{user_input}} Output to evaluate: {{output}} Rubric: {{rubric}}"
+
+  assert:
+    - type: "llm-rubric"
+      value: |
+        评分标准 (每项0-10分):
+        1. 是否给出了合理解释
+        2. 回答对不对
+        3. 是否符合常理
+        4. 是否符合逻辑
+        5. 只用中文回答
+        给出总体平均分，作为score得分， 大于9分，pass 为true
+      metric: LLM
+
+    - type: "not-contains-any"
+      value:
+        - "AI"
+        - "人工智能"
+        - "抱歉"
+        - "作为一个"
+      metric: Keywords
+    
+
+
+
+
+# 1. 角色一致性：回答是否严格遵循角色设定的背景、性格特征
+# 2. 对话自然度：对话是否流畅自然，符合真实对话特征
+# 3. 情感表达：表达出足够的情感，且符合角色性格特征
+# 4. 语言一致性: 提问使用的语言和回答使用的语言一致
+
